@@ -1,123 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>AtomNews</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f5f5f5;
+      color: #111;
     }
 
     header {
-      background: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header h1 {
-      color: red;
-      margin: 0;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-      font-weight: 500;
-    }
-
-    .hero {
-      height: 300px;
-      background: url('https://picsum.photos/1200/400') center/cover;
-      display: flex;
-      align-items: end;
+      background: #bb1919;
       color: white;
-      padding: 20px;
-      font-size: 28px;
+      padding: 15px 40px;
+      font-size: 24px;
       font-weight: bold;
     }
 
+    nav {
+      background: #222;
+      padding: 10px 40px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
     .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 2fr 1fr;
       gap: 20px;
-      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .hero-main {
+      background: white;
+      padding: 20px;
+    }
+
+    .hero-main h2 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .card {
       background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-    }
-
-    .card-content {
       padding: 15px;
+      border-left: 4px solid #bb1919;
     }
 
     .card h3 {
       margin: 0;
+      font-size: 16px;
     }
 
-    button {
-      padding: 8px 12px;
-      cursor: pointer;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .news {
+      background: white;
+      padding: 15px;
+    }
+
+    .news h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>ATOMNEWS</h1>
-  <nav>
-    <a href="login.html">Login</a>
-    <a href="admin.html">Admin</a>
-  </nav>
-</header>
+<header>ATOMNEWS</header>
 
-<div class="hero">
-  🚨 Breaking News Today
+<nav>
+  <a href="#">Home</a>
+  <a href="#">World</a>
+  <a href="#">Technology</a>
+  <a href="#">Business</a>
+  <a href="#">Science</a>
+</nav>
+
+<div class="container">
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="hero-main">
+      <h2>Global markets react to major AI policy shift</h2>
+      <p>Governments worldwide introduce new AI regulations impacting tech giants and startups alike.</p>
+    </div>
+
+    <div class="hero-side">
+      <div class="card"><h3>Tech companies accelerate AI integration</h3></div>
+      <div class="card"><h3>Space agencies plan next lunar mission</h3></div>
+      <div class="card"><h3>Energy sector sees rapid innovation</h3></div>
+    </div>
+  </div>
+
+  <!-- NEWS GRID -->
+  <div class="grid">
+
+    <div class="news">
+      <h4>New smartphone launches redefine performance benchmarks</h4>
+      <p>Leading manufacturers unveil devices with advanced AI capabilities and improved efficiency.</p>
+    </div>
+
+    <div class="news">
+      <h4>Global climate summit focuses on actionable goals</h4>
+      <p>World leaders push for measurable commitments to reduce emissions and accelerate sustainability.</p>
+    </div>
+
+    <div class="news">
+      <h4>Breakthrough in renewable energy storage announced</h4>
+      <p>Scientists reveal a new battery technology that could transform power grids worldwide.</p>
+    </div>
+
+    <div class="news">
+      <h4>Major cybersecurity alert issued worldwide</h4>
+      <p>Experts warn of a new wave of cyber threats targeting critical infrastructure systems.</p>
+    </div>
+
+    <div class="news">
+      <h4>Streaming platforms compete for exclusive content</h4>
+      <p>Media companies invest heavily in original productions to capture global audiences.</p>
+    </div>
+
+    <div class="news">
+      <h4>Education systems adopt AI-driven learning tools</h4>
+      <p>Schools and universities integrate intelligent systems to enhance student performance.</p>
+    </div>
+
+    <div class="news">
+      <h4>Healthcare sector sees rapid digital transformation</h4>
+      <p>Hospitals implement new technologies to improve patient care and efficiency.</p>
+    </div>
+
+    <div class="news">
+      <h4>Automotive industry shifts toward electric vehicles</h4>
+      <p>Manufacturers accelerate EV production amid rising global demand.</p>
+    </div>
+
+    <div class="news">
+      <h4>Global economy shows signs of recovery</h4>
+      <p>Analysts report steady growth across multiple regions following recent slowdowns.</p>
+    </div>
+
+    <div class="news">
+      <h4>Artificial intelligence reshapes job markets</h4>
+      <p>Experts discuss the evolving role of AI in employment and workforce development.</p>
+    </div>
+
+  </div>
+
 </div>
 
-<div class="container" id="news"></div>
-
-<script type="module">
-  import { db } from "./firebase.js";
-  import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const newsDiv = document.getElementById("news");
-
-  const querySnapshot = await getDocs(collection(db, "news"));
-
-  querySnapshot.forEach(doc => {
-    const data = doc.data();
-
-    newsDiv.innerHTML += `
-      <div class="card">
-        <img src="https://picsum.photos/400/200">
-        <div class="card-content">
-          <h3>${data.title}</h3>
-          <p>${data.content}</p>
-        </div>
-      </div>
-    `;
-  });
-</script>
+<footer>
+  © 2026 AtomNews
+</footer>
 
 </body>
 </html>

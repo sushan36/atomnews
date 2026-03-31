@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastNews Daily</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .news-card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .news-meta {
+      color: gray;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .news-content {
+      font-size: 15px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>⚡ FastNews Daily</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Tech</a>
+  <a href="#">Gaming</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container" id="news-container">
+</div>
+
+<footer>
+  © 2026 FastNews Daily
+</footer>
+
+<script>
+  const newsData = [
+    {
+      title: "🚨 WhatsApp New Feature Released",
+      date: "March 31, 2026",
+      content: "WhatsApp introduces a new AI-powered chat assistant. This helps users reply faster and smarter."
+    },
+    {
+      title: "🔥 YouTube Shorts Update",
+      date: "March 31, 2026",
+      content: "YouTube improves monetization rules for Shorts creators. More earnings expected."
+    },
+    {
+      title: "📱 Apple Working on New AI iPhone",
+      date: "March 31, 2026",
+      content: "Apple is reportedly developing an AI-focused iPhone with smarter Siri and automation."
+    }
+  ];
+
+  const container = document.getElementById("news-container");
+
+  newsData.forEach(news => {
+    const card = document.createElement("div");
+    card.className = "news-card";
+
+    card.innerHTML = `
+      <div class="news-title">${news.title}</div>
+      <div class="news-meta">${news.date}</div>
+      <div class="news-content">${news.content}</div>
+    `;
+
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>

@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin - AtomNews</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
 <h2>Admin Panel</h2>
 
-<div class="admin-box">
-  <input type="text" id="title" placeholder="News Title">
-  <textarea id="content" placeholder="News Content"></textarea>
-  <button onclick="addNews()">Publish</button>
-</div>
+<input id="title" placeholder="Title">
+<textarea id="content" placeholder="Content"></textarea>
+<button onclick="postNews()">Post</button>
 
-<script src="script.js"></script>
+<script type="module">
+  import { db } from "./firebase.js";
+  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  window.postNews = async function() {
+    const title = document.getElementById("title").value;
+    const content = document.getElementById("content").value;
+
+    await addDoc(collection(db, "news"), {
+      title,
+      content
+    });
+
+    alert("News posted!");
+  }
+</script>
+
 </body>
 </html>

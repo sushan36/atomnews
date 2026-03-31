@@ -1,0 +1,16 @@
+export default function handler(req, res) {
+  res.status(200).json([
+    {
+      id: 1,
+      title: "Global markets react to AI policy changes",
+      summary: "Governments introduce new AI regulations...",
+      image: "https://picsum.photos/400/200",
+    },
+    {
+      id: 2,
+      title: "Breakthrough in renewable energy",
+      summary: "New battery technology could transform...",
+      image: "https://picsum.photos/400/201",
+    }
+  ]);
+}
